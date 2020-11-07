@@ -1,0 +1,9 @@
+footer {
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    /* background:#6cf; */
+    /* background-color: rgba(175, 186, 235, 0.514); */
+    background-color:whitesmoke;
+    text-align: center;
+ }
