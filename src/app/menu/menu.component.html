@@ -1,2 +1,74 @@
-<p>menu works!</p>
-<p>Menu</p>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Escolha seu artigo para ler abaixo!</h1>
+      <p class="lead">Escolha apartir do combobox qual artigo deseja ler!</p>
+
+      <div class='form-group'>
+        <select class="form-control" (change)="escolherArtigo($event)" id="exampleFormControlSelect1" [(ngModel)]='artigo' >
+          <option value="" disabled selected>Escolha qual artigo deseja ler!</option>
+          <option *ngFor='let artigo of artigos'>{{ artigo }}</option>
+        </select>
+
+      </div>
+
+
+        <!-- <p>{{ artigo }}</p> -->
+
+    </div>
+
+    <div class='container'>
+        <!-- <app-artigos></app-artigos> -->
+
+        <div *ngIf="artigo==''" class="card">
+          <div class="card-body">
+            <h2 class="card-title">Esolha qual artigo voce deseja ler!</h2>
+            <p class='card-text'>Clique no combobox acima para escolher um artigo para ler!</p>
+          </div>
+        </div>
+
+        <div *ngIf="artigo!=null" class="card">
+          <div class="card-body">
+            <h2 class="card-title">{{ tituloArtigo }}</h2>
+            <p class='card-text'>{{ textoArtigo }}</p>
+          </div>
+      </div>
+
+        <!-- <div *ngIf="artigo=='O que é Lorem Ipsum?'" class="card">
+            <div class="card-body">
+              <h2 class="card-title">O que é Lorem Ipsum?</h2>
+              <p class='card-text'>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker</p>
+            </div>
+        </div> -->
+
+        <!-- <div *ngIf="artigo=='De onde ele vem?'" class="card">
+          <div class="card-body">
+            <h2 class="card-title">De onde ele vem?</h2>
+            <p class='card-text'>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker</p>
+          </div>
+      </div>
+
+      <div *ngIf="artigo=='Porque nós o usamos?'" class="card">
+        <div class="card-body">
+          <h2 class="card-title">Porque nós o usamos?</h2>
+          <p class='card-text'>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker</p>
+        </div>
+    </div>
+
+    <div *ngIf="artigo=='Onde posso conseguí-lo?'" class="card">
+      <div class="card-body">
+        <h2 class="card-title">Onde posso conseguí-lo?</h2>
+        <p class='card-text'>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker</p>
+      </div>
+  </div>
+
+  <div *ngIf="artigo=='Passagem padrão original de Lorem Ipsum, usada desde o século XVI.'" class="card">
+    <div class="card-body">
+      <h2 class="card-title">Passagem padrão original de Lorem Ipsum, usada desde o século XVI.</h2>
+      <p class='card-text'>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker</p>
+    </div>
+</div> -->
+
+
+
+    </div>
+  </div>
